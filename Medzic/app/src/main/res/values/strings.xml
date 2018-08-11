@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">Medzic</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email/Username</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_sign_up">Sign Up</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="API_URL">http://medzic.com/</string>
+    <string name="next">Next</string>
+    <string name="skip">Skip</string>
+    <string name="start">Start</string>
+
+    <string name="slide_1_title">Find Medicine!</string>
+    <string name="slide_1_desc">57,000+ medicines brands are searchable Know side effects, contents,
+dosage and price!</string>
+
+    <string name="slide_2_title">Find Alternative</string>
+    <string name="slide_2_desc">Alternate medicines based on contents. Stop paying too much for your
+medicines!</string>
+
+    <string name="slide_3_title">Nearby Pharmacy</string>
+    <string name="slide_3_desc">Find a list of all nearby pharmacy stores and call on listed number for
+instant help!</string>
+
+    <string name="slide_4_title">Stock and Review</string>
+    <string name="slide_4_desc">Know the best discount available on nearby pharmacy and stocks.
+Review based on service.</string>
+    <string name="title_activity_registration">Registration</string>
+    <string-array name="regType_array">
+        <item>Retailer</item>
+        <item>Distributor</item>
+        <item>Customer</item>
+    </string-array>
+    <string name="title_activity_search">Medzic.com</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_search">Search</string>
+    <string name="title_location">Near By</string>
+
+    <integer-array name="img_id_arr">
+        <item>@drawable/banner_1</item>
+        <item>@drawable/banner_2</item>
+        <item>@drawable/banner_3</item>
+        <item>@drawable/banner_4</item>
+    </integer-array>
+</resources>

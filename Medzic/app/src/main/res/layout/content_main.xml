@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dot_light_screen4">
+
+    <LinearLayout
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="0px"
+        android:layout_height="0px"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="55dp">
+
+
+        <com.chabbal.slidingdotsplash.SlidingSplashView
+            android:id="@+id/splash"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:imageResources="@array/img_id_arr"
+            android:layout_gravity="top|start">
+
+            <AutoCompleteTextView
+                android:id="@+id/search"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/login_edittext"
+                android:ems="10"
+                android:hint="Search Medicines"
+                android:drawableRight="@android:drawable/ic_menu_search"
+                android:gravity="center|start" >
+
+            </AutoCompleteTextView>
+        </com.chabbal.slidingdotsplash.SlidingSplashView>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:id="@+id/nearByTab"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_marginTop="10dp"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:src="@drawable/map_loc"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:textColor="#000000"
+                            android:text="NearBy Pharmacy"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textColor="#000000"
+                            android:text="NearBy Pharmacy dhjkdsh dhjdh dfhhukfdshs dkjdfh duys 5665 512 561245"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+                <View
+                    android:id="@+id/seperater1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    android:layout_below="@id/nearByTab"
+                    android:layout_marginTop="10dp"/>
+
+                <LinearLayout
+                    android:id="@+id/findMedicineTab"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/seperater1">
+
+                    <ImageView
+                        android:layout_marginTop="10dp"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:src="@drawable/search"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:textColor="#000000"
+                            android:text="Find Medicines"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textColor="#000000"
+                            android:text="NearBy Pharmacy dhjkdsh dhjdh dfhhukfdshs dkjdfh duys 5665 512 561245"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/seperater2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    android:layout_below="@id/findMedicineTab"
+                    android:layout_marginTop="10dp"/>
+
+                <LinearLayout android:orientation="horizontal"
+                    android:layout_height="fill_parent"
+                    android:layout_width="fill_parent">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_height="fill_parent"
+                        android:layout_width="0dp"
+                        >
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_height="fill_parent"
+                        android:layout_width="0dp"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+        </ScrollView>
+    </LinearLayout>
+
+    <!--<LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        <com.chabbal.slidingdotsplash.SlidingSplashView
+            android:id="@+id/splash"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:imageResources="@array/img_id_arr"
+            android:layout_gravity="bottom"/>
+    </LinearLayout>-->
+
+</android.support.constraint.ConstraintLayout>
