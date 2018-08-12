@@ -6,6 +6,7 @@ import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -119,14 +120,29 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         mProgressView = findViewById(R.id.login_progress);
     }
 
+    private Boolean exit = false;
     @Override
     public void onBackPressed() {
-        LinearLayout entry = (LinearLayout)findViewById(R.id.entryOptions);
-        ScrollView login = (ScrollView)findViewById(R.id.login_form);
-        entry.setVisibility(View.VISIBLE);
-        login.setVisibility(View.GONE);
-    }
+        if (exit) {
+            finish(); // finish activity
+        } else {
+            LinearLayout entry = (LinearLayout)findViewById(R.id.entryOptions);
+            ScrollView login = (ScrollView)findViewById(R.id.login_form);
+            entry.setVisibility(View.VISIBLE);
+            login.setVisibility(View.GONE);
+            Toast.makeText(this, "Press Back again to Exit.",
+                    Toast.LENGTH_SHORT).show();
+            exit = true;
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    exit = false;
+                }
+            }, 3 * 1000);
 
+        }
+
+    }
     private void populateAutoComplete() {
         if (!mayRequestContacts()) {
             return;
@@ -325,7 +341,11 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         }else if(R.id.show_sign_up_button == view.getId()){
             startActivity(new Intent(LoginActivity.this, RegistrationActivity.class));
         }else{
-            startActivity(new Intent(LoginActivity.this, SearchActivity.class));
+            Intent launchNextActivity = new Intent(LoginActivity.this, SearchActivity.class);
+            launchNextActivity.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            launchNextActivity.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            launchNextActivity.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+            startActivity(launchNextActivity);
         }
     }
 

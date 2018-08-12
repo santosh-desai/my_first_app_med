@@ -1,5 +1,6 @@
 package app.com.org.medzic;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
@@ -10,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.TextView;
@@ -62,6 +64,15 @@ public class SearchActivity extends AppCompatActivity {
         //Getting the instance of AutoCompleteTextView
         AutoCompleteTextView actv= (AutoCompleteTextView)findViewById(R.id.search);
         actv.setAdapter(adapter);
+
+        actv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                String text = (String)adapterView.getItemAtPosition(i);
+                Toast.makeText(getApplicationContext(), "Selected Medicine : "+text, Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(SearchActivity.this, MedicineDetailsActivity.class));
+            }
+        });
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }

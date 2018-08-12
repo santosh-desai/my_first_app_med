@@ -81,7 +81,7 @@
                             android:layout_weight="1"
                             android:gravity="center"
                             android:textColor="#000000"
-                            android:text=": Find a list of all nearby pharmacy stores and call on listed number for instant help."/>
+                            android:text="Find a list of all nearby pharmacy stores and call on listed number for instant help."/>
 
                     </LinearLayout>
                 </LinearLayout>

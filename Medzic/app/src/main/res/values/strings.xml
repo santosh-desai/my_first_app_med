@@ -54,4 +54,5 @@ Review based on service.</string>
         <item>@drawable/banner_3</item>
         <item>@drawable/banner_4</item>
     </integer-array>
+    <string name="title_activity_medicine_details">Medicine Details</string>
 </resources>
