@@ -54,7 +54,25 @@
             android:name=".MedicineDetailsActivity"
             android:label="@string/title_activity_medicine_details"
             android:parentActivityName=".SearchActivity"
-            android:windowSoftInputMode="stateVisible|adjustPan"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateVisible|adjustPan">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="app.com.org.medzic.SearchActivity" />
+        </activity>
+        <activity
+            android:name=".ReviewActivity"
+            android:label="@string/title_activity_review"
+            android:parentActivityName=".MedicineDetailsActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="app.com.org.medzic.MedicineDetailsActivity" />
+        </activity>
+        <activity
+            android:name=".TnCActivity"
+            android:label="@string/title_activity_tn_c"
+            android:parentActivityName=".SearchActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

@@ -1,5 +1,6 @@
 package app.com.org.medzic;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -10,9 +11,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
-public class MedicineDetailsActivity extends AppCompatActivity {
+public class MedicineDetailsActivity extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +30,8 @@ public class MedicineDetailsActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Clicked toolbar ", Toast.LENGTH_SHORT).show();
             }
         });
-
+        TextView review = (TextView)findViewById(R.id.writeReview);
+        review.setOnClickListener(this);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
@@ -54,4 +57,9 @@ public class MedicineDetailsActivity extends AppCompatActivity {
             return false;
         }
     };
+
+    @Override
+    public void onClick(View view) {
+        startActivity(new Intent(MedicineDetailsActivity.this, ReviewActivity.class));
+    }
 }
