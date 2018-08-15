@@ -5,6 +5,7 @@ import android.animation.AnimatorListenerAdapter;
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Handler;
 import android.support.annotation.NonNull;
@@ -78,7 +79,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     String name;
     String uids = "";
     String l_email;
-
+    SharedPreferences sharedPreferences;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -86,7 +87,15 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         // Set up the login form.
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
         populateAutoComplete();
-
+        sharedPreferences = getSharedPreferences("medzic_sj", MODE_PRIVATE);
+        boolean skipped = sharedPreferences.getBoolean("SKIPPED", false);
+        if(skipped){
+            Intent launchNextActivity = new Intent(LoginActivity.this, SearchActivity.class);
+            launchNextActivity.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            launchNextActivity.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            launchNextActivity.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+            startActivity(launchNextActivity);
+        }
         mPasswordView = (EditText) findViewById(R.id.password);
         mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
@@ -341,6 +350,9 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         }else if(R.id.show_sign_up_button == view.getId()){
             startActivity(new Intent(LoginActivity.this, RegistrationActivity.class));
         }else{
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putBoolean("SKIPPED", true);
+            editor.commit();
             Intent launchNextActivity = new Intent(LoginActivity.this, SearchActivity.class);
             launchNextActivity.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             launchNextActivity.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);

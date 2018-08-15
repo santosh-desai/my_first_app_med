@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/dot_light_screen4">
 
     <TextView
-        android:layout_marginTop="60dp"
         android:id="@+id/medicineName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
         android:gravity="center_horizontal"
         android:text="Medzic medicine"
-        android:textSize="22dp"
-        android:textColor="#000000"/>
+        android:textColor="#000000"
+        android:textSize="22dp" />
+
     <TextView
         android:id="@+id/medicinedetail"
-        android:layout_below="@id/medicineName"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/medicineName"
         android:gravity="center_horizontal"
-        android:textColor="#000000"
-        android:text="100 mg"/>
+        android:text="100 mg"
+        android:textColor="#000000" />
 
     <LinearLayout
         android:id="@+id/layout1"
@@ -147,6 +147,7 @@
                 android:textColor="#000000" />
 
         </LinearLayout>
+
         <LinearLayout
             android:id="@+id/treatData"
             android:layout_width="fill_parent"
@@ -201,11 +202,11 @@
                 android:src="@drawable/ic_action_review" />
 
             <TextView
+                android:id="@+id/writeReview"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="2dp"
                 android:layout_marginTop="5dp"
-                android:id="@+id/writeReview"
                 android:text="Write Review "
                 android:textColor="#ffffff"
                 android:textSize="18dp" />
@@ -214,12 +215,15 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/layout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/layout1"
-        android:id="@+id/layout2"
         android:orientation="vertical"
-        android:padding="10dp">
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp">
+
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -239,32 +243,34 @@
 
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:background="#b9d4ff"
             android:layout_marginTop="5dp"
+            android:background="#b9d4ff"
             android:orientation="horizontal">
 
             <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:padding="3dp"
                 android:src="@drawable/onboarding3" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="5dp"
-                    android:text="Medzic Store 1"
                     android:singleLine="true"
+                    android:text="Medzic Store 1"
                     android:textColor="#000000"
-                    android:textSize="15dp"
-                    />
+                    android:textSize="15dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -276,6 +282,7 @@
             </LinearLayout>
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -315,25 +322,30 @@
                 android:textSize="17dp" />
         </LinearLayout>
     </LinearLayout>
+
     <LinearLayout
+        android:id="@+id/layout3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/layout2"
-        android:id="@+id/layout3"
         android:orientation="vertical"
-        android:padding="10dp">
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp">
+
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:background="#b9d4ff"
             android:layout_marginTop="5dp"
+            android:background="#b9d4ff"
             android:orientation="horizontal">
 
             <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:padding="3dp"
                 android:src="@drawable/onboarding3" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -344,11 +356,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="5dp"
-                    android:text="Medzic Store 2"
                     android:singleLine="true"
+                    android:text="Medzic Store 2"
                     android:textColor="#000000"
-                    android:textSize="15dp"
-                    />
+                    android:textSize="15dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -362,6 +373,7 @@
 
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -403,64 +415,71 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/layout4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/layout3"
-        android:id="@+id/layout4"
         android:orientation="vertical"
-        android:padding="10dp">
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/entrybtnsColor"
-        android:orientation="horizontal">
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp">
 
-
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginTop="5dp"
-
-            android:text="Alternate Medicines"
-            android:textColor="#000000"
-            android:textSize="18dp" />
+            android:background="@color/entrybtnsColor"
+            android:orientation="horizontal">
 
 
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:background="#b9d4ff"
-        android:layout_marginTop="5dp"
-        android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="5dp"
 
-    <ImageView
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:padding="3dp"
-        android:src="@drawable/onboarding2" />
-        <TextView
-            android:layout_width="wrap_content"
+                android:text="Alternate Medicines"
+                android:textColor="#000000"
+                android:textSize="18dp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
             android:layout_marginTop="5dp"
-            android:text="Medzic Med2 \n 100mg \n Rs.59.99"
-            android:textColor="#000000" />
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="17dp"
-            android:layout_marginLeft="15dp"
-            android:src="@drawable/search" />
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="17dp"
-            android:layout_marginLeft="15dp"
-            android:src="@android:drawable/ic_dialog_info" />
+            android:background="#b9d4ff"
+            android:orientation="horizontal">
 
-    </LinearLayout>
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:padding="3dp"
+                android:src="@drawable/onboarding2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:text="Medzic Med2 \n 100mg \n Rs.59.99"
+                android:textColor="#000000" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="17dp"
+                android:src="@drawable/search" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="17dp"
+                android:src="@android:drawable/ic_dialog_info" />
+
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="fill_parent"
@@ -501,26 +520,30 @@
                 android:textSize="17dp" />
         </LinearLayout>
     </LinearLayout>
+
     <LinearLayout
+        android:id="@+id/layout5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/layout4"
-        android:id="@+id/layout5"
         android:orientation="vertical"
-        android:padding="10dp">
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp">
 
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:background="#b9d4ff"
             android:layout_marginTop="5dp"
+            android:background="#b9d4ff"
             android:orientation="horizontal">
 
             <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:padding="3dp"
                 android:src="@drawable/onboarding2" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -528,17 +551,19 @@
                 android:layout_marginTop="5dp"
                 android:text="Medzic Med3 \n 200mg \n Rs. 100.45"
                 android:textColor="#000000" />
+
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:layout_marginTop="17dp"
                 android:layout_marginLeft="15dp"
+                android:layout_marginTop="17dp"
                 android:src="@drawable/search" />
+
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:layout_marginTop="17dp"
                 android:layout_marginLeft="15dp"
+                android:layout_marginTop="17dp"
                 android:src="@android:drawable/ic_dialog_info" />
 
         </LinearLayout>
