@@ -33,6 +33,7 @@
                 android:layout_margin="5dp"
                 android:background="@drawable/login_edittext"
                 android:ems="10"
+                android:lines="1"
                 android:hint="Search Medicines"
                 android:drawableRight="@android:drawable/ic_menu_search"
                 android:gravity="center|start" >
@@ -41,8 +42,10 @@
         </com.chabbal.slidingdotsplash.SlidingSplashView>
 
         <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:id="@+id/scrolly"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="fill_vertical">
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
@@ -52,9 +55,10 @@
                     android:layout_height="match_parent">
 
                     <ImageView
-                        android:layout_marginTop="10dp"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentTop="true"
                         android:src="@drawable/map_loc"/>
@@ -63,22 +67,25 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"
                         android:orientation="vertical">
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
                             android:gravity="center"
                             android:textStyle="bold"
+                            android:layout_marginTop="5dp"
+                            android:layout_gravity="top|center_horizontal"
+                            android:textSize="18dp"
                             android:textColor="#000000"
                             android:text="NearBy Pharmacy"/>
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_weight="1"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:textSize="16dp"
                             android:gravity="center"
                             android:textColor="#000000"
                             android:text="Find a list of all nearby pharmacy stores and call on listed number for instant help."/>
@@ -100,9 +107,10 @@
                     android:layout_below="@id/seperater1">
 
                     <ImageView
-                        android:layout_marginTop="10dp"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentTop="true"
                         android:src="@drawable/search"/>
@@ -111,23 +119,27 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"
                         android:orientation="vertical">
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
                             android:gravity="center"
+                            android:layout_marginTop="5dp"
                             android:textStyle="bold"
+                            android:layout_gravity="top|center_horizontal"
+                            android:textSize="18dp"
+
                             android:textColor="#000000"
                             android:text="Find Medicines"/>
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
                             android:gravity="center"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:textSize="16dp"
                             android:textColor="#000000"
                             android:text="57,000+ medicines brands are searchable Know side effects, contents, dosage and price"/>
 
@@ -142,7 +154,9 @@
                     android:layout_below="@id/findMedicineTab"
                     android:layout_marginTop="10dp"/>
 
-                <LinearLayout android:orientation="horizontal"
+                <LinearLayout
+                    android:id="@+id/extraz"
+                    android:orientation="horizontal"
                     android:layout_height="fill_parent"
                     android:layout_width="fill_parent"
                     android:layout_below="@id/seperater2">
@@ -190,11 +204,17 @@
                     </LinearLayout>
 
                 </LinearLayout>
-
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_below="@id/extraz"
+                    android:layout_weight="2"
+                    android:text="" />
             </RelativeLayout>
 
 
         </ScrollView>
+
     </LinearLayout>
 
     <!--<LinearLayout

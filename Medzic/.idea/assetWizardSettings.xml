@@ -33,8 +33,10 @@
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="outputName" value="ic_action_review" />
-                                      <entry key="theme" value="HOLO_DARK" />
+                                      <entry key="assetType" value="IMAGE" />
+                                      <entry key="imageAsset" value="C:\Users\BALAJI\Desktop\medzic\assets\icon\tablet@1,25x.png" />
+                                      <entry key="outputName" value="ic_search_icon" />
+                                      <entry key="themeColor" value="02090b" />
                                     </map>
                                   </option>
                                 </PersistentState>

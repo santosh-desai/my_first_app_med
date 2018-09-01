@@ -14,7 +14,7 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
-    <string name="API_URL">http://medzic.com/</string>
+    <string name="API_URL">https://medzic.net/</string>
     <string name="next">Next</string>
     <string name="skip">Skip</string>
     <string name="start">Start</string>

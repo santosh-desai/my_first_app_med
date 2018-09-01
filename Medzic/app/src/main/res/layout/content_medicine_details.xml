@@ -252,9 +252,11 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:padding="3dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
                 android:src="@drawable/onboarding3" />
 
             <LinearLayout
@@ -277,7 +279,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="5dp"
-                    android:text="Medicine @ nearby Pharmacy"
+                    android:text="Medicine @ nearby Pharmacy  bfhsbfhs \n gfhjjgfhs \n hfjkhdsf fhkjfhks \n fgjshfsjk hfkjhfds"
                     android:textColor="#000000" />
             </LinearLayout>
 
@@ -341,9 +343,11 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:padding="3dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
                 android:src="@drawable/onboarding3" />
 
             <LinearLayout
@@ -452,8 +456,8 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:padding="3dp"
                 android:src="@drawable/onboarding2" />
 
@@ -539,8 +543,8 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:padding="3dp"
                 android:src="@drawable/onboarding2" />
 
